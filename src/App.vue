@@ -3,6 +3,9 @@
     <v-toolbar app text-xs-center>
       <v-toolbar-title v-text="isLoggedIn ? username : title" />
       <v-spacer />
+      <v-btn flat icon @click="$router.push('/webcam')">
+        <v-icon>fas fa-camera</v-icon>
+      </v-btn>
       <v-btn flat icon @click="subscribe()">
         <v-icon>fas {{isSubscribed ? 'fa-bell-slash' : 'fa-bell'}}</v-icon>
       </v-btn>
